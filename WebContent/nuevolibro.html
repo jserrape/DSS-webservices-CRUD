@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nuevo libro</title>
+</head>
+<body>
+
+	<form action="http://localhost:8080/pr3-dss/rest/libros"
+		method="POST">
+		<div class="form-group">
+			<label for="id">Id</label> <input name="id" type="text" class="form-control" />
+		</div>
+
+		<div class="form-group">
+			<label for="id">Titulo</label> <input name="titulo" type="text" class="form-control" />
+		</div>
+
+		<div class="form-group">
+			<label for="id">Autor</label> <input name="autor" type="text" class="form-control" />
+		</div>
+
+		<div class="form-group">
+			<label for="id">Editorial</label> <input name="editorial" type="text" class="form-control" />
+		</div>
+		
+		<div class="form-group">
+			<label for="id">Portada</label> <input name="portada" type="file" class="form-control" />
+		</div>
+
+		<div class="form-group">
+			<input value="Añadir libro" type="submit" />
+		</div>
+	</form>
+
+</body>
+</html>
