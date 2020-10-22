@@ -2,7 +2,6 @@ package model;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
@@ -29,7 +28,7 @@ public class RecursoLibros {
 	@GET
 	@Produces(MediaType.TEXT_XML)
 	public List<Libro> getLibros() {
-		List<Libro> lista = new ArrayList<Libro>();
+		List<Libro> lista = new ArrayList<>();
 		lista.addAll(LibroDao.INSTANCE.getModel().values());
 		return lista;
 	}
@@ -37,7 +36,7 @@ public class RecursoLibros {
 	@GET
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
 	public List<Libro> getLibros2() {
-		List<Libro> lista = new ArrayList<Libro>();
+		List<Libro> lista = new ArrayList<>();
 		lista.addAll(LibroDao.INSTANCE.getModel().values());
 		return lista;
 	}
@@ -56,7 +55,7 @@ public class RecursoLibros {
 			@FormParam("editorial") String edit, @FormParam("portada") String img,
 			@Context HttpServletResponse servletResponse) throws IOException {
 		Libro libro=new Libro(id, tit, aut, edit);
-		if (img != "") {
+		if (img.equals("")) {
 			libro.setPortada(img);
 		}
 		LibroDao.INSTANCE.getModel().put(id, libro);

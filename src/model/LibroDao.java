@@ -3,8 +3,6 @@ package model;
 import java.util.HashMap;
 import java.util.Map;
 
-import model.Libro;
-
 public enum LibroDao {
 	INSTANCE;
 
